@@ -3,36 +3,20 @@ name: second
 on: push
 
 jobs:
-    job1:
-        name: First job
+    ubuntu:
         runs-on: ubuntu-latest
         steps:
-          - name: Step one
-            uses: actions/checkout@v2
-          - name: Step two
-            run: date     #
-    job2:
-        name: Second job
+            - run: date     #
+    windows:
         runs-on: windows-latest
         steps:
-          - name: Step one
-            uses: actions/checkout@v2
-          - name: Step two
-            run: date
-    job3:
-        name: Third job
-        runs-on: macOS-latest
+            - run: date
+    macos:
+        runs-on: macos-latest
         steps:
-          - name: Step one
-            uses: actions/checkout@v2
-          - name: Step two
-            run: date
-    job4:
-        name: Fourth job
+          - run: date
+    depends:
         runs-on: ubuntu-latest
-        need: [job1, job2, job3]
+        needs: [ubuntu, windows, macos]
         steps:
-          - name: Step one
-            uses: actions/checkout@v2
-          - name: Step two
-            run: 'echo "job1, job2, job3 executed successfully"'
+            - run: 'echo "job1, job2, job3 executed successfully"'
