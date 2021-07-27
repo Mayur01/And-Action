@@ -1,2 +1,2 @@
 # Lesson 01
-# And-Action
+Learning how to create github actions.
