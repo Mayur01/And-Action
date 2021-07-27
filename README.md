@@ -1,2 +1,2 @@
-# Exercise files for Chapter 01
+# Lesson 01
 # And-Action
