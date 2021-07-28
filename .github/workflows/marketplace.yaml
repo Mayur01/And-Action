@@ -1,0 +1,10 @@
+name: Python application
+
+on: Push
+
+jobs:
+    build:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: code-check
+      uses: actions/checkout@v2
