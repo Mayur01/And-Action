@@ -1,10 +1,12 @@
 name: Python application
 
-on: Push
+on: push
 
 jobs:
     build:
-    runs-on: ubuntu-latest
-    steps: 
-    - name: code-check
-      uses: actions/checkout@v2
+        runs-on: ubuntu-latest
+        steps: 
+            - name: code-check
+              uses: actions/checkout@v2
+            - name: Python Syntax Checker
+              uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
