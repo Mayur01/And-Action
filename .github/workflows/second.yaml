@@ -17,6 +17,6 @@ jobs:
           - run: date
     depends:
         runs-on: ubuntu-latest
-        needs: [ubuntu, windows, macos]
+        needs: [ubuntu, windows, macos
         steps:
             - run: 'echo "job1, job2, job3 executed successfully"'
